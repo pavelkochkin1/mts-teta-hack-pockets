@@ -26,6 +26,8 @@ public class MainService {
         Process process = Runtime.getRuntime().exec(command);
         process.waitFor();
         BufferedReader reader = new BufferedReader(new InputStreamReader(process.getInputStream()));
+        BufferedReader errorReader = new BufferedReader(new InputStreamReader(process.getErrorStream()));
+        process.waitFor();
 
         String data = reader.readLine();
         String delimiter = " ";
@@ -53,8 +55,8 @@ public class MainService {
 
     public Double getProbability(String url) throws IOException, InterruptedException {
         String[] str = getDataFromMlModel(url);
-        //return Double.parseDouble(str[2]) * 100;
-        return 0.78 * 100;
+        str[3] = str[3].substring(0, str[3].length() - 2);
+        return Double.parseDouble(str[3]) * 100;
     }
 
     public List<UrlEntity> findAll() {

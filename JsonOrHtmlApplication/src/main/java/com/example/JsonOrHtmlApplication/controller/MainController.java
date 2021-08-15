@@ -32,7 +32,7 @@ public class MainController {
 
         if (currentEntity != null) {
             currentEntity.setDataType(service.getDataType(currentEntity.getLink()));
-            currentEntity.setProbability(service.getProbability(currentEntity.getLink()));
+            currentEntity.setProbability(Math.ceil(service.getProbability(currentEntity.getLink())));
         }
 
         return "ml_page";
