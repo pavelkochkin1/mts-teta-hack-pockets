@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ru" xmlns:th="http://www.thymeleaf.org" xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JsonOrHtmlQualifier</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.2/css/all.css"/>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" th:href="@{/css/style.css}">
+</head>
+<body style="background-color: black;">
+<div>
+    <header th:replace="fragments/header :: header"></header>
+</div>
+<div class="fluid col-2">
+</div>
+<div class="container">
+    <div class="row align-items-lg-center">
+        <div class="col">
+            <br><br><br><br>
+            <h1 class="text-white mb-3">Легкий путь к большим возможностям</h1>
+            <p class="text-white mb-3">
+                JsonOrHtmlQualifier - сервис на основе машинного обучения, позволяющий классифицировать URL адреса
+                на технические пользовательские, а также отфильтровывать неработающие сервера.
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+                Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+            </p>
+            <form th:action="@{/ml-model}" class="">
+                <button type="submit" class="btn btn-lg mb-3 btn-success">Начать!</button>
+            </form>
+        </div>
+        <div class="col">
+            <img style="width:550px" src="https://i.ibb.co/PQ3g5bg/doc-2021-08-15-15-13-27.gif">
+        </div>
+    </div>
+</div>
+</div>
+</body>
+</html>
