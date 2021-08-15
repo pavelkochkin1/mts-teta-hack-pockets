@@ -21,8 +21,8 @@ public class MainService {
     }
 
     public String[] getDataFromMlModel(String url) throws IOException, InterruptedException {
-        String command = "python3 src/ml_model/basemodel.py "
-                + url;
+        String command = "python3 src/ml_model/basemodel.py " + url;
+        System.out.println(command);
         Process process = Runtime.getRuntime().exec(command);
         process.waitFor();
         BufferedReader reader = new BufferedReader(new InputStreamReader(process.getInputStream()));
