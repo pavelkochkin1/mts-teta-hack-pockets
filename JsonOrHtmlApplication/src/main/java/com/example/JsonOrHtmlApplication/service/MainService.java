@@ -55,6 +55,11 @@ public class MainService {
 
     public Double getProbability(String url) throws IOException, InterruptedException {
         String[] str = getDataFromMlModel(url);
+
+        if (str.length == 0) {
+            return 0.0;
+        }
+
         str[3] = str[3].substring(0, str[3].length() - 2);
         return Double.parseDouble(str[3]) * 100;
     }
