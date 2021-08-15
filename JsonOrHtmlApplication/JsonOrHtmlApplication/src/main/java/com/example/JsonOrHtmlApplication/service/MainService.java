@@ -21,7 +21,7 @@ public class MainService {
     }
 
     public String[] getDataFromMlModel(String url) throws IOException, InterruptedException {
-        String command = "python C:\\Users\\Stanislav\\Desktop\\JsonOrHtmlApplication\\JsonOrHtmlApplication\\src\\ml_model\\basemodel.py "
+        String command = "python3 src/ml_model/basemodel.py "
                 + url;
         Process process = Runtime.getRuntime().exec(command);
         process.waitFor();
