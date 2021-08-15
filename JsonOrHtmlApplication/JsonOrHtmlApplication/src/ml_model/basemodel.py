@@ -15,7 +15,7 @@ snowball = SnowballStemmer(language='english')
 
 def main():
     try:
-        model = joblib.load('C:\\Users\\Stanislav\\Desktop\\JsonOrHtmlApplication\\JsonOrHtmlApplication\\src\\ml_model\\basemodel.joblib')
+        model = joblib.load('src/ml_model/basemodel.joblib')
     except:
         sys.stdout('ERROR: downloading model')
 
