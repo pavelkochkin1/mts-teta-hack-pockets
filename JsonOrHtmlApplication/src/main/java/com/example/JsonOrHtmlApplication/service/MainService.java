@@ -29,7 +29,11 @@ public class MainService {
         BufferedReader errorReader = new BufferedReader(new InputStreamReader(process.getErrorStream()));
         process.waitFor();
 
-        String data = reader.readLine();
+        File file = new File("/opt/mts/pockets/JsonOrHtmlApplication/src/ml_model/result.txt");
+        FileReader fr = new FileReader(file);
+        BufferedReader readerFromFile = new BufferedReader(fr);
+
+        String data = readerFromFile.readLine();
         String delimiter = " ";
 
         if (data != null) {
