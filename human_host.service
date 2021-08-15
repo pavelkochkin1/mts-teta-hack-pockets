@@ -1,0 +1,11 @@
+[Unit]
+Description=human_host
+
+[Service]
+Type=simple
+User=vaaliferov
+WorkingDirectory=/opt/mts/pockets/JsonOrHtmlApplication/target
+ExecStart=java -jar JsonOrHtmlApplication-0.0.1-SNAPSHOT.jar
+
+[Install]
+WantedBy=multi-user.target
